@@ -1,58 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CompuStore</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/f2bc37b843.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CompuStore</title>
+
+    <link rel="shortcut icon" href="img/CompuStore_ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f2bc37b843.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="container" id="idcontainer">
+
   <header class="header" id="idheader">
-    <div>
-        <img class="img" src="img/LogoCompuStore3.svg" alt="Logo CompuStore" width="80%">
+    <div class="logo">
+        <img class="img" src="img/CompuStore1.svg" alt="Logo CompuStore" width="80%">
     </div>
-    <div><h1>CompuStore</h1></div>
-    <nav>
+    <div><h1 class="titulo">CompuStore</h1></div>
+    <nav class="menu" id="idmenu">
         <a href="#">Inicio</a>
         <a href="#">Nosotros</a>
         <a href="#">Servicio</a>
         <a href="#">Contacto</a>
         <a href="#">Productos</a>
     </nav>
+    <div class="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
 </header>
+
   <div class="carrusel" id="idcarrusel">
 
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="img/repara.jpg"  alt="Reparcion"style="width:1200px" height="500px">
-    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+       <img src="img/repara.jpg"  alt="Reparcion"style="width:1200px" height="500px">
+      </div>
     
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="img/compu.jpg" alt="Entrega" style="width:1200px" height="500px">
-    </div>
+     <div class="mySlides fade">
+       <div class="numbertext">2 / 3</div>
+       <img src="img/compu.jpg" alt="Entrega" style="width:1200px" height="500px">
+      </div>
     
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="img/accesorios.jpg" alt="Productos" style="width:1200px" height="500px">
-    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/accesorios.jpg" alt="Productos" style="width:1200px" height="500px">
+      </div>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
     </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
+      
     <main class="main" id="idmain">
-      <h2>main</h2>
+        <article class="nosotros">
+           <h2>Nosotros</h2>
+              <hr style=color:black>
+               <p>CompuStore es una empresa familiar que comenzo en el 2013, desde entonce nos espacializamos en ofrecer servicios 
+                  informaticos a empresas y a clientes particulares. Algo que hemos aprendido es a escuchar a nuestros clientes 
+                  para brindarle soluciones integrales en el menor tiempo posible y adaptandonos a las necesidades de cada uno de ellos.
+                 </p>
+            <div class="boton">
+               <a href="#">Saber mas..</a>
+            </div>
+        </article>
+
+        <article class="servicio">
+            <h2>Servicios</h2>
+             <hr>
+               <ul>
+                   <li>Mantenimiento correctivo y preventivo para Pc, Laptot e Impresoras</li>
+                   <li>Instalacion de programas, Antivirus, Office, Redes y Servidores</li>
+                   <li>Venta de accsesorios y repuestos</li>
+                   <li>Relleno de cartucho y toner</li>
+                   <li>Diagnostico y reparacion de tarjetas madres</li>
+                   <li>Instalacion de camaras de seguridad</li>
+                   <li>Soporte tecnico para empresa</li>
+                </ul>
+              <div class="boton">
+                  <a href="#">Saber mas..</a>
+              </div>
+        </article>
+
+        <article class="producto">
+            <h2>Productos</h2>
+              <hr>
+                 <ul>
+                      <li>Audifonos</li>
+                      <li>Teclados</li>
+                      <li>Mause inalambricos</li>
+                      <li>Camaras  de seguridad</li>
+                      <li>Parlantes</li>
+                      <li>Reproductores</li>
+                      <li>Laptos</li>
+                      <li>Impresoras</li>
+                      <li>Y mucho mas..</li>
+                  </ul>
+          <div class="boton">
+                <a href="#">Saber mas..</a>
+          </div>
+        </article>
     </main>
     <footer class="footer">
       <div class="pie">
@@ -66,32 +121,41 @@
                 <a href="#">Productos</a>
               </nav>
           </section>
-          <section class="contacto" id="contacto">
+          <hr>
+          <section class="contacto">
               <h2>Contáctanos</h2>
-                  <p><span class="material-icons-outlined">phone</span>2532-1102</p> 
-                  <p><span class="material-icons-outlined">whatsapp</span>8574-0277</p>
-                  <a href="mailto:compustoreservice@gmail.com"><span class="material-icons-outlined">email</span>compustoreservice@gmail.com</a> 
-                  <address><span class="material-icons-outlined">location_on</span>Super mercado la Colonia 1/2c sur Jinotepe/Carazo</address>
+                  <div id=idcontacto>
+                    <p><span class="material-icons-outlined">phone</span>2532-1102</p> 
+                    <p><span class="material-icons-outlined">whatsapp</span>8574-0277</p>
+                    <a href="mailto:compustoreservice@gmail.com"><span class="material-icons-outlined">email</span>compustoreservice@gmail.com</a> 
+                    <address><span class="material-icons-outlined">location_on</span>Super mercado la Colonia 1/2c sur Jinotepe/Carazo</address>
+                  </div>
             </section>
+            <hr>
           <section class="boletin">
               <h2>Boletín</h2>
                 <form id="idboletin">
                   <label>Te gustaria saber mas de nuestros servicios</label>
-                  <input type="email" name="correo" id="correo" placeholder="Correo..."> 
+                  <input id="boton_"type="email" name="correo" id="correo" placeholder="Correo..."> 
                   <input type="checkbox" | name="Acepto">Acepto recibir Noticaciones
-                  <input type="button" value="Enviar">
+                  <input id="boton" type="button" value="Enviar">
                 </form>
           </section>
+          <hr>
           <section class="siguenos">
               <h2>Siguenos</h2>
-              <p><i class="fab fa-facebook-square"></i>facebook</p>
+              <div id="idsiguenos">
+                <p><i id="faceboock" class="fab fa-facebook-square"></i>facebook</p>
+              </div>
           </section>
       </div>
       <div class="pie1" id="idpie1">
           <p>Copyright ©</p>
-          <p> All Rights Reserved<p>
+          <div class="vl"></div>
+          <p>All Rights Reserved<p>
       </div>  
   </footer>
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

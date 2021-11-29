@@ -19,30 +19,46 @@ body{
   }
   .header{
     display: flex;
-    padding: 15px;
+    padding: 5px;
     background-color: #0476d9;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:space-between; 
   }
+  
   .header h1{
      font-size: 50px;
   }
   .header nav{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    line-height: 140px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
   }
   .header nav a{
     color:white;
     padding: 14px 20px;
     text-decoration: none;
-   font-size: 20px;
+    font-size: 20px;
+    transition: .2s;
   }
   .header nav a:hover{
     padding: 14px 20px;
     text-decoration: none;
     background-color:#0597f2;
+    border-radius: 2px;
+  }
+  .menu-toggle{
+    display: none;
+    justify-content:end;
+    align-items: center;
+    color: rgb(245, 243, 243);
+    font-size: 40px;
+    cursor: pointer;
+    padding: 5px;
+    line-height:50px;
+  }
+  .show{
+    height: 100px !important;
   }
   #idcarrusel{
     grid-column: 1/4;
@@ -138,43 +154,190 @@ body{
   flex-direction: row;
   justify-items: center;
   justify-content: center;
-  background-color: gray;
-  height: 100px;
+  background-color: rgb(139, 156, 201);
+  height: auto;
+}
+.nosotros {
+  background-color: rgb(111, 112, 109);
+  height: auto;
+  width: 33.33%;
+  padding: 15px;
+  margin: 5px;
+  text-align: justify;
+  font-size: 18x;
+}
+.main, h2{
+  text-align: center;
+  font-size: 20px;
+}
+.producto {
+  background-color: rgb(111, 112, 109);
+  height: auto;
+  width: 33.33%;
+  padding: 15px;
+  margin: 5px;
+  text-align: justify;
+  font-size: 18px;
+}
+.servicio{
+  background-color: rgb(111, 112, 109);
+  height: auto;
+  width: 33.33%;
+  padding: 15px;
+  margin: 5px;
+  text-align: justify;
+  font-size:18px
+}
+.boton{
+  background-color: rgb(44, 43, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius:3px;
+}
+.boton a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 footer{
     background-color: #0476d9;
     color:white;
     height:auto;
 }
-footer h2{
-    
+.footer h2{
     height: 20px;
   }
   .pie{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     flex-direction: row;
     justify-content: space-around;
   }
-
-  .navegacion{
-      display: grid
+  .pie> hr{
+    display: none;
   }
   #idnavegacion a{
     display: flex;
-      flex-direction: column;
-      padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
   }
-  .contacto{
-      margin: 5px;
+  #idnavegacion a:hover{
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color:#0597f2;
   }
+  #idcontacto{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  #idcontacto p{
+    margin: 0;
+  }
+  #idcontacto .material-icons-outlined{
+    margin: 5px;
+  }
+  #idboletin{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+  }
+  #idboletin #boton{
+    display: flex;
+    width: 200px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  #idboletin #boton_{
+    padding: 5px;
+  }
+  #idsiguenos{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  #idsiguenos i{
+    margin: 5px;
+  }
+
   .pie1{
     display: flex;
     flex-direction: row;
     background-color: #0597f2;
-    justify-content:space-around; 
+    justify-content:center; 
+  }
+  .vl{
+    border-left: 1px solid white;
+    height: auto;
+    margin: 2px;
   }
   footer a{
     color: white;
     text-decoration: none;
+  }
+
+  /*media query*/
+  @media only screen and (max-width: 600px) {
+    .carrusel{
+    display: none;
+    }
+    .titulo{
+      display: none;
+    }
+    .header{
+      display: flex;
+      height: 60px;
+    }
+    .img{
+      height: 55px;
+    }
+    .menu-toggle{
+      display: block;
+    }
+    .menu-toggle:hover{
+      background-color: rgb(37, 82, 206);
+    }
+    #idmenu{
+      background: #0476d9;
+      position:absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: .3s ease-out;
+    }
+      #idmenu a{
+        font-size: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #idmain{ 
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    #idmain> article{
+      width: 100%;
+    }
+    .pie{
+       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .pie> hr{
+      display:inline-flex;
+      width: 90%;
+    }
+    .pie> section{
+      width: 100%;
+    }
   }
