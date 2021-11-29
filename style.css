@@ -6,6 +6,10 @@ body{
     font-family: 'Antic Slab', serif;
     color:White;
   }
+  .contenedor img{
+    height: 100%;
+    width: 100%;
+  }
   .container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -58,7 +62,7 @@ body{
     line-height:50px;
   }
   .show{
-    height: 100px !important;
+    height: 50px !important;
   }
   #idcarrusel{
     grid-column: 1/4;
@@ -66,9 +70,15 @@ body{
   
 /* Slideshow container */
 #idcarrusel{
-  max-width: 1200px;
+  width: 100%;
   position: relative;
   margin: auto;
+  margin-top: ;
+}
+#idcarrusel img{
+  border-radius: 3px;
+  height: 500px;
+  width: 100%;
 }
 
 /* Next & previous buttons */
@@ -164,7 +174,7 @@ body{
   padding: 15px;
   margin: 5px;
   text-align: justify;
-  font-size: 18x;
+  font-size: 18px;
 }
 .main, h2{
   text-align: center;
@@ -304,7 +314,7 @@ footer{
       background-color: rgb(37, 82, 206);
     }
     #idmenu{
-      background: #0476d9;
+      background: #2a679c;
       position:absolute;
       top: 60px;
       left: 0;
