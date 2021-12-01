@@ -1,0 +1,34 @@
+.servicio-main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(234, 234, 240);
+    grid-column: 1/4;
+  }
+  
+.servicio-main img{
+    width: 200px;
+    height: 200px;
+}
+.servicios{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.servicio-main .servicio{
+    width: 30%;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .servicio-main .servicios{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicio-main .servicio{
+        width: 100%;
+    }
+}
